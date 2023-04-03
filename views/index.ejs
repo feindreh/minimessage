@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <% messages.forEach((msg)=>{ %>
+      <p>
+        <h2><%- msg.user %></h2>
+        <h3><%- msg.text %></h3>
+        <p><%- msg.added %></p>
+      </p>
+    <% }); %>
+    <form method="POST" action="/"><button>New Message</button></form>
+  </body>
+</html>
